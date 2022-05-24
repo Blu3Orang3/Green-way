@@ -27,4 +27,6 @@ const obs = new IntersectionObserver(
 );
 obs.observe(header);
 
-// change background
+// animate car
+let car = TweenMax.fromTo(".car-logo", 8, {x:0}, {delay:2, x:300, ease:Linear.easeNone, repeat:-1});
+t.progress(0.5).pause();
