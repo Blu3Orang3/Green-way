@@ -28,5 +28,12 @@ const obs = new IntersectionObserver(
 obs.observe(header);
 
 // animate car
-let car = TweenMax.fromTo(".car-logo", 8, {x:0}, {delay:2, x:300, ease:Linear.easeNone, repeat:-1});
-t.progress(0.5).pause();
+let tml = gsap.timeline({repeat:-1});
+let start = 0;
+let end = 320;
+tml.fromTo(".car-logo", {x:start}, {duration:8, delay:2, x:end, ease:'none'})
+.to(".car-logo", {duration:0.2, delay:1,scaleX:-1, ease:'none'})
+.to(".car-logo", {duration:0.3, delay:0.5, rotation:30})
+.to(".car-logo", {duration:0.3, delay:0.5, rotation:0})
+.to(".car-logo", {duration:8, delay:0.5, x:start, ease:'none'})
+.to(".car-logo", {duration:0.2, delay:1,scaleX:1, ease:'none' });
