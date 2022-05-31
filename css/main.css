@@ -263,39 +263,46 @@ textarea {
   }
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 /**************************/
 /* HERO-HEADER */
 /**************************/
 .header {
   height: 100vh;
-  width: 100%;
-  background: no-repeat url('../img/hero-img/hero-img-6-min.jpg');
+  width: 100vw;
+  background: no-repeat url('../img/hero-img/hero-img-3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 2% 100%;
   position: relative;
+  display: grid;
+  justify-content: center;
   top: 0;
 }
 .nav-wrapper {
   display: flex;
   align-items: center;
-  width: 100%;
-  overflow: hidden;
+  justify-content: space-between;
+  width: 100vw;
+  overflow: visible;
   /* Because we want header to be sticky later */
-  height: 7.4rem;
+  height: 7.6rem;
   backdrop-filter: blur(1px);
   z-index: 999; 
+  background-color: rgba(245, 245, 245,0.8);
+  position: relative;
 }
 .sticky {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
-  left:0;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.08);
-  background-color: rgba(255, 255, 255,0.8); 
+  width: 100%;
+  height: 8rem;
+  padding:0 2rem;
+  background-color: hsl(39, 77%, 95%);
 }
 
 .main-logo {
@@ -306,53 +313,44 @@ textarea {
   align-items: center;
   /* background-color: white; */
   padding: 1rem;
-  margin-right: 30rem;
-  margin-left: 10rem;
+  margin-left: 8.4rem;
   position: relative;
 }
 .main-logo a {
   font-size: 4.4rem;
   color: green;
-  font-weight: 100;
+  font-weight: 200;
   font-family: 'Raleway', sans-serif;
 }
 .car-logo {
   height: 8rem;
   width: 8rem;
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   margin-left: 1rem;
 }
-
-.main-logo-link {
-  font-size: 4.4rem;
-  cursor: pointer;
-}
-
 .main-logo-link:link,
 .main-logo-link:visited {
-  color: hsl(120, 98%, 16%);;
+  color: hsl(120, 98%, 16%);
   text-decoration:none;
 }
 
 /**************************/
   /* NAVIGATION */
   /**************************/
-  .main-nav {
-    padding-right: 15rem;
-  }
   .main-nav-list {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 3.2rem;
   }
+  
   .main-nav-link:link,
   .main-nav-link:visited {
     display: inline-block;
     text-decoration: none;
     color: #333;
-    font-weight: 500;
-    font-size: 1.8rem;
+    font-weight: 100;
+    font-size: 1.6rem;
     transition: all 0.3s;
     font-size: 1.85rem;
   }
@@ -377,13 +375,15 @@ textarea {
     text-decoration: none;
   }
 
-  .flags {
+  .flag-container {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    width: 11rem;
-    margin-left: 6rem;
-    margin-top: 1.5rem;
+    /* width: 11rem; */
+    padding-top: 1.5rem;
+    margin-right: 8.4rem;
+    gap: 1.2rem;
+    /* z-index: 9999; */
   }
   .ru-flag {
     height: 5rem;
@@ -397,19 +397,30 @@ textarea {
   /* HERO PANEL */
   /**************************/
   .header-main-text {
-    color: white;
-    font-size: 2rem;
+    display: block;
+    color: hsl(0, 0%, 100%);
+    font-size: 3rem;
+    font-weight: 700;
     width: 100rem;
-    text-decoration: underline;
-    top: 35rem;
-    left: 5rem;
-    /* margin-left: 10rem;
-    margin-top: 30rem; */
-    height: 10rem;
-    position: absolute;
+    margin-left: 10rem;
+    font-family: 'Poppins', sans-serif;
+    word-wrap: break-word;
+    /* background-color: hsla(0, 0%, 0%,0.3);
+    border-radius:  1rem 1rem 0 0;
+    height: 35rem; */
   }
-  .header-main-text h1 {
-    font-family: 'Raleway', sans-serif;
+  .header-main-text h3 {
+    line-height: 8rem;
+  }
+  .number {
+    text-decoration: none;
+    color: hsl(0, 0%, 92%);
+    text-decoration: none;
+  }
+  
+  .main-logo-link {
+    font-size: 4.4rem;
+    cursor: pointer;
   }
   .section-hero {
     display: flex;
@@ -417,8 +428,188 @@ textarea {
     justify-content: center;
   }
 
-.temp {
-  height: 120rem;
-  background: url("../img/hero-img/hero-img-6-min.jpg");
-  background-size: cover;
+
+  .milestones {
+    display: grid;
+    text-align: center;
+    padding-top: 5rem;
+    margin: 0 8rem;
+  }
+  .achivement-notice {
+    display: block;
+    width: 100%;
+    font-size: 4.4rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.milestones-wrapper {
+  display: grid;
+  gap: 15rem;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3,1fr);
+  height: 30rem;
 }
+.milestone {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.milestone i {
+  height: 5.4rem;
+  width: 5.4rem;
+  font-size: 5.4rem;
+  background-color: hsla(120, 100%, 25%, 0.7);
+  border-radius: 50%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.milestone-achivement {
+  font-size: 3.4rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+.milestone span {
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.milestone .folder-90 {
+  transform: rotate(-90deg);
+}
+.my-mood {
+  font-size: 4.4rem;
+  text-align: center;
+  padding: 3rem  0;
+  width: 100%;
+  background-color: hsl(210, 100%, 12%);
+  color: white;
+}
+.my-mood:hover {
+  transition: all 0.5s;
+  background-color: hsl(120, 98%, 16%);
+}
+
+/* ---------------------------------------- */
+/* ----------car categories--------------- */
+/* -------------------------------------- */
+
+.car-categories {
+  display: grid;
+  text-align: center;
+  padding-top: 1rem;
+  margin: 0 8rem;
+}
+.car-categories-notice {
+  display: block;
+  width: 100%;
+  font-size: 4.4rem;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 2rem;
+}
+
+.car-categories-wrapper {
+display: grid;
+gap: 5.6rem;
+justify-content: center;
+grid-template-columns: repeat(3,26%);
+height: 45rem;
+}
+.car-type-box {
+height: 100%;
+background-color: hsla(39, 77%, 96%);
+}
+
+.car-type-box i {
+font-size: 12.4rem;
+height: 12.4rem;
+padding: 1rem;
+margin: 0 auto;
+}
+
+.car-type {
+font-size: 2.8rem;
+font-weight: 400;
+font-family: 'Poppins', sans-serif;
+margin-top: 4rem;
+}
+.car-type-description {
+  padding: 0.4rem 2rem;
+font-size: 1.4rem;
+font-family: 'Poppins', sans-serif;
+}
+
+/* --------advantages baner----- */
+/* ------------------------------- */
+
+.advantages {
+  display: grid;
+  gap: 5.6rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(2,1fr);
+  padding-top: 5rem;
+  margin: 0 17rem;
+  height: 40%;
+}
+.advantages-img {
+  width: 100%;
+  height: 100%;
+}
+
+.advantages-text-box {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  
+}
+.advantages-text-box ul {
+  list-style:none;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+}
+.advantages-text-box ul li {
+  background-image: url("/img/list-style-16.png");
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  line-height: 3rem;
+  padding-left: 2.5rem;
+}
+.advantages-text-box h4 {
+  font-size: 2.7rem;
+  line-height: 1;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 4rem;
+  }
+
+  .advantages-text-box p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .advantages-text-box .number {
+    font-size: 2.6rem;
+    font-weight: 700;
+    width: 16.5rem;
+  }
+  .advantages-text-box .ctc:link,
+  .advantages-text-box .ctc:visited {
+    padding: 1rem 1rem;
+    color: #fff;
+    background-color: hsl(210, 100%, 12%);
+    transition: all 0.3s;
+    border-radius: 9px;
+  }
+
+  .advantages-text-box .ctc:hover,
+  .advantages-text-box .ctc:active {
+    background-color: hsl(120, 98%, 16%);
+    text-decoration: none;
+  }
+
+
