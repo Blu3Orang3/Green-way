@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="eng">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -18,31 +18,43 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/queris.css">
 
   <!-- font family -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+  <link 
+  rel="stylesheet"
+  href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link 
+  rel="stylesheet"
+  href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
     
     <header class="header">
       <div class="nav-wrapper">
         <div class="main-logo">
           <a class="main-logo-link">Green Way</a>
-          <img src="img/logo.svg" alt="" class="car-logo">
+          <img src="img/logo.svg" alt="" class="car-logo car-animation">
         </div>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">Home</a></li>
+          <li><a href="#" class="main-nav-link home-link">Home</a></li>
           <li><a href="#" class="main-nav-link">Services</a></li>
           <li><a href="#" class="main-nav-link">Pricing</a></li>
           <li><a href="#" class="main-nav-link nav-cta">Contact Us</a></li>
@@ -52,6 +64,12 @@
         <a href=""  class="ru-flag"><img src="img/flags/russian.svg" alt="" class="flag"></a>
         <a href="" class="us-flag"><img src="img/flags/us.svg" alt="" class="flag"></a>
       </div>
+
+      <button class="btn-mobile-nav">
+        <i class="fa-solid fa-grip-lines icon-mobile-nav" name="menu-outline"></i>
+        <i class="fa-solid fa-xmark icon-mobile-nav" name="close-outline"></i>
+      </button>
+
     </div>
       <div class="header-main-text">
         <h1>Truck Dispatch Service<br>For all scales of business</h1>
@@ -71,7 +89,7 @@
         </div>
         <div class="milestone">
           <i class="las la-hand-holding-usd"></i>
-          <p class="milestone-achivement">$10,000+</p>
+          <p class="milestone-achivement">$100,000+</p>
           <span>Weekly Gross Revenue</span>
         </div>
         <div class="milestone">
@@ -82,7 +100,7 @@
       </div> 
     </section>
 
-    <h3 class="my-mood">Do not procratinate! start working now!</h3>
+    <h3 class="slogan">Full support from start to finish!</h3>
 
     <section class="milestones"> 
       <h4 class="achivement-notice">Getting Started Is Easy</h4> 
@@ -111,23 +129,23 @@
         <div class="car-type-box">
           <p class="car-type">Flatbed/Stepdeck</p>
           <i class="las la-truck"></i>
-          <p class="car-type-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat sint obcaecati sequi libero. Iure ad voluptate architecto quae amet, maiores numquam, tenetur corporis consectetur laborum at excepturi error voluptatibus nulla? Voluptate nam libero odit quasi aliquam nostrum. Perspiciatis doloremque illo alias neque earum rem impedit incidunt obcaecati porro expedita?</p>
+          <p class="car-type-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat sint obcaecati sequi libero. Iure ad voluptate architecto quae amet, maiores numquam, tenetur corporis consectetur laborum at excepturi error voluptatibus nulla? Voluptate nam libero odit quasi aliquam nostrum.</p>
         </div>
         <div class="car-type-box">
           <p class="car-type">Dry Van</p>
           <i class="las la-truck-pickup"></i>
-          <p class="car-type-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, laudantium, perspiciatis obcaecati doloremque aut numquam dolor quae odio cupiditate tempore aliquam sapiente, consequatur iste accusamus perferendis non cumque illum? Repudiandae animi blanditiis quas modi quo eligendi sed natus adipisci assumenda, voluptatem facilis, distinctio in nisi sit vero? Hic, facere non!</p>
+          <p class="car-type-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, laudantium, perspiciatis obcaecati doloremque aut numquam dolor quae odio cupiditate tempore aliquam sapiente, consequatur iste accusamus perferendis non cumque illum? Repudiandae animi blanditiis quas modi quo eligendi sed natus adipisci assumenda.</p>
         </div>
         <div class="car-type-box">
           <p class="car-type">Flatbed/Stepdeck</p>
           <i class="las la-truck"></i>
-          <p class="car-type-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt voluptate accusamus in autem. Nulla molestiae repellendus sit, facere inventore possimus, harum iure impedit adipisci sapiente consequuntur consequatur, esse explicabo mollitia? Deleniti fugit doloremque nam nemo perferendis nisi numquam eum laudantium quidem ducimus voluptas, unde rerum iusto provident dolorum incidunt expedita!</p>
+          <p class="car-type-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt voluptate accusamus in autem. Nulla molestiae repellendus sit, facere inventore possimus, harum iure impedit adipisci sapiente consequuntur consequatur, esse explicabo mollitia? Deleniti fugit doloremque nam nemo perferendis nisi.</p>
         </div>
       </div> 
     </section>
     <section class="advantages">
       <div class="speaker-img-box">
-        <img src="img/advantages-img/speaker.jpg" alt="" class="advantages-img">
+        <img src="img/advantages-img/speaker.webp" alt="" class="advantages-img">
       </div>
       <div class="advantages-text-box">
         <h4>Truck Dispatch Services: Your Dedicated Truck Dispatcher Does All The Heavy Lifting So You Can Stay Focused On Driving</h4>
@@ -144,12 +162,121 @@
         <a href="tel:+13128183585" class="number ctc"> (312) 818-3585</a>
       </div>
     </section>
-  </main>
+    <section class="price-rates">
+      <div class="price-rates-title">
+        <h4>Percentage Per Truck</h4>
+        <span>For 1+ Trucks</span>
+      </div>
+      <div class="price-rates-check">
+        <h5>CALL FOR PRICING</h5>
+        <ul>
+          <li>Negotiate Best Rates</li>
+          <li>Carrier Packet Setup</li>
+          <li>Sign & Secure Rate Confirmation</li>
+          <li>Personal Dispatcher</li>
+          <li>TONU/Detention Assistance</li>
+        </ul>
+      </div>
+      <div class="number-box">
+        <a href="tel:+13128183585" class="number ctc"> (312) 818-3585</a>
+      </div>
+      </div>
+    </section>
+    <section class="advantages advantages-second">
+      <div class="advantages-text-box">
+        <h4>Truck Dispatch Services: Your Dedicated Truck Dispatcher Does All The Heavy Lifting So You Can Stay Focused On Driving</h4>
+        <p>Truck Dispatch 360 is a “Full Service” truck dispatching company that handles all of the back-office work so you can compete with the large fleets. Typically, a large carrier would hire somebody to handle all of these tasks, but it is unaffordable for a small carrier, that's where Truck Dispatch 360 comes in to help! Our process is simple, your dedicated truck dispatcher will work with you by your rules. We develop the best lanes that suit your desired schedule, whether you want to be home every night, every other night, or once every 2 weeks, our freight dispatchers work with you to develop a lane that will achieve your target goals.</p>
+        <ul>
+          <li>We Negotiate Hard For Best Paying Rates</li>
+          <li>We Talk To Brokers</li>
+          <li>We Handle All Your Broker Setup Packets</li>
+          <li>We Handle Lumper/Detention</li>
+          <li>Dedicated Dispatcher</li>
+          <li>You Pick The Areas You Want To Drive</li>
+          <li>Best Truck Dispatch Company On Your Side </li>
+        </ul>
+      </div>
+      <div class="speaker-img-box">
+        <img src="img/advantages-img/speaker.webp" alt="" class="advantages-img-2">
+      </div>
+    </section>
+    <section class="testimonial-section ">
+      <div class="container swiper mySwiper ">
+        <div class="content swiper-wrapper ">
 
+          <div class="car-type-box swiper-slide">
+            <p class="car-type">Flatbed/Stepdeck</p>
+            <i class="las la-truck"></i>
+            <p class="car-type-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat sint obcaecati sequi libero. Iure ad voluptate architecto quae amet, maiores numquam, tenetur corporis consectetur.</p>
+          </div>
+          <div class="car-type-box swiper-slide">
+            <p class="car-type">Flatbed/Stepdeck</p>
+            <i class="las la-truck"></i>
+            <p class="car-type-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat sint obcaecati sequi libero. Iure ad voluptate architecto quae amet, maiores numquam, tenetur corporis consectetur .</p>
+          </div>
+          <div class="car-type-box swiper-slide">
+            <p class="car-type">Flatbed/Stepdeck</p>
+            <i class="las la-truck"></i>
+            <p class="car-type-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat sint obcaecati sequi libero. Iure ad voluptate architecto quae amet, maiores numquam, tenetur corporis consectetur.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-next pagination-button">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+      <div class="button-prev pagination-button">
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
+    </section>
+    <section class="inquairy">
+      <div class="form-box">
+        <div class="cta-text-box">
+          <form 
+            method="POST" 
+            class="cta-form"
+            id="cta-form1"
+            enctype="multipart/form-data"
+            >
+            <div class="upload-box">
+              <label for="upload">Upload Your Files</label>
+              <input type="file" id="upload" name="atachemnt" multiple>
+            </div>
+            <div class="name">
+              <label for="full-name">Full Name</label>
+              <input id="full-name" type="text" placeholder="Jhon Smith" name="full name" required>
+            </div>
+            <div class="email">
+              <label for="email">Email adress</label>
+              <input id="email" type="email" placeholder="me@example.com" name="email" required>
+            </div>
+            <div class="select">
+              <label for="select-where">Where did you here on us?</label>
+              <select name="cartype" id="select-where" required name="option:">
+                <option value="">Please choose one option</option>
+                <option value="Friends">Friend and family</option>
+                <option value="youtube">Youtube video</option>
+                <option value="podcast">Podcast</option>
+                <option value="ad">Facebook ad</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+      
+            <button class="btn btn--form" type="submit">Submit New Inquairy</button>
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+      </div>
+    </section>
+  </main>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
   <script src="js/main.js"></script>
+
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
