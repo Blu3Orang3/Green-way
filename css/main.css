@@ -268,33 +268,40 @@ textarea {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 /**************************/
-/* HERO-HEADER */
+/* HEADER CONTENT */
 /**************************/
 .header {
   height: 100vh;
-  width: 100vw;
-  background: no-repeat url('../img/hero-img/hero-img-3.jpg');
+  width: 100%;
+  background: no-repeat url('../img/hero-img/hero-img-3.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 2% 100%;
   position: relative;
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
   top: 0;
 }
 .nav-wrapper {
+  align-self: start;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   overflow: visible;
   /* Because we want header to be sticky later */
   height: 7.6rem;
   backdrop-filter: blur(1px);
   z-index: 999; 
-  background-color: rgba(245, 245, 245,0.8);
+  background-color: rgba(223, 211, 211, 0.6);
   position: relative;
 }
+
+.nav-wrapper * {
+  min-width: 0;
+}
+/* class for stciky header */
 .sticky {
   position: fixed;
   top: 0;
@@ -302,7 +309,7 @@ textarea {
   width: 100%;
   height: 8rem;
   padding:0 2rem;
-  background-color: hsl(39, 77%, 95%);
+  background-color: hsl(37, 80%, 99%);
 }
 
 .main-logo {
@@ -321,21 +328,42 @@ textarea {
   color: green;
   font-weight: 200;
   font-family: 'Raleway', sans-serif;
+  cursor: pointer;
 }
+
 .car-logo {
   height: 8rem;
   width: 8rem;
   margin-top: 0.6rem;
   margin-left: 1rem;
+  stroke-width: 2rem;
 }
 .main-logo-link:link,
 .main-logo-link:visited {
   color: hsl(120, 98%, 16%);
   text-decoration:none;
 }
+/* ----------------- */
+/* ---mobile nav--------- */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.2rem;
+  width: 4.2rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
 
 /**************************/
-  /* NAVIGATION */
+  /* HEADER NAVIGATION */
   /**************************/
   .main-nav-list {
     list-style: none;
@@ -364,7 +392,7 @@ textarea {
   .main-nav-link.nav-cta:link,
   .main-nav-link.nav-cta:visited {
     padding: 1rem 2.4rem;
-    border-radius: 9px;
+    border-radius: 5px;
     color: #fff;
     background-color: hsl(210, 100%, 12%);
   }
@@ -380,34 +408,36 @@ textarea {
     justify-content:space-between;
     align-items: center;
     /* width: 11rem; */
-    padding-top: 1.5rem;
     margin-right: 8.4rem;
     gap: 1.2rem;
     /* z-index: 9999; */
   }
   .ru-flag {
-    height: 5rem;
+    height: 100%;
     width: 5rem;
   }
   .us-flag {
-    height: 4.8rem;
+    height: 100%;
     width: 4.8rem;
   }
   /**************************/
-  /* HERO PANEL */
+  /* HEADER MAIN TEXT -HERO PANEL */
   /**************************/
   .header-main-text {
-    display: block;
+    display: inline-block;
     color: hsl(0, 0%, 100%);
     font-size: 3rem;
     font-weight: 700;
-    width: 100rem;
-    margin-left: 10rem;
+    width: 90%;
+    min-width: 0;
+    margin-top: 16rem;
+    margin-left: 8.4rem;
+    /* margin-left: 10rem; */
+    /* margin-bottom: 8rem; */
     font-family: 'Poppins', sans-serif;
     word-wrap: break-word;
-    /* background-color: hsla(0, 0%, 0%,0.3);
-    border-radius:  1rem 1rem 0 0;
-    height: 35rem; */
+    /* border-radius:  1rem 1rem 0 0;
+    height: 35rem;  */
   }
   .header-main-text h3 {
     line-height: 8rem;
@@ -415,25 +445,18 @@ textarea {
   .number {
     text-decoration: none;
     color: hsl(0, 0%, 92%);
-    text-decoration: none;
   }
   
-  .main-logo-link {
-    font-size: 4.4rem;
-    cursor: pointer;
-  }
-  .section-hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
+  /**************************/
+  /* MILESTONES SECTION */
+  /**************************/ 
 
   .milestones {
     display: grid;
     text-align: center;
     padding-top: 5rem;
-    margin: 0 8rem;
+    margin: 0 auto;
   }
   .achivement-notice {
     display: block;
@@ -441,7 +464,7 @@ textarea {
     font-size: 4.4rem;
     font-family: 'Poppins', sans-serif;
   }
-
+/* --------------------------------------- */
 .milestones-wrapper {
   display: grid;
   gap: 15rem;
@@ -468,7 +491,7 @@ textarea {
   margin: 0 auto;
 }
 
-.milestone-achivement {
+.milestone p {
   font-size: 3.4rem;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
@@ -478,20 +501,22 @@ textarea {
   font-family: 'Poppins', sans-serif;
 }
 
-.milestone .folder-90 {
-  transform: rotate(-90deg);
-}
-.my-mood {
+.slogan {
   font-size: 4.4rem;
   text-align: center;
   padding: 3rem  0;
   width: 100%;
   background-color: hsl(210, 100%, 12%);
   color: white;
+  letter-spacing: 0.4rem;
 }
-.my-mood:hover {
+.slogan:hover {
   transition: all 0.5s;
   background-color: hsl(120, 98%, 16%);
+}
+
+.milestone .folder-90 {
+  transform: rotate(-90deg);
 }
 
 /* ---------------------------------------- */
@@ -521,7 +546,7 @@ height: 45rem;
 }
 .car-type-box {
 height: 100%;
-background-color: hsla(39, 77%, 96%);
+background-color: hsla(39, 77%, 96%, 0.5);
 }
 
 .car-type-box i {
@@ -543,26 +568,31 @@ font-size: 1.4rem;
 font-family: 'Poppins', sans-serif;
 }
 
+/* ------------------------------- */
 /* --------advantages baner----- */
 /* ------------------------------- */
 
 .advantages {
   display: grid;
   gap: 5.6rem;
-  margin: 0 auto;
   grid-template-columns: repeat(2,1fr);
   padding-top: 5rem;
-  margin: 0 17rem;
-  height: 40%;
+  margin: 4rem 17rem;
 }
+
+  .advantages-second {
+
+  }
+
 .advantages-img {
   width: 100%;
-  height: 100%;
+  height: 95%;
 }
 
 .advantages-text-box {
   display: flex;
   flex-flow: column;
+  margin-top: 2rem;
   gap: 2rem;
   
 }
@@ -572,7 +602,7 @@ font-family: 'Poppins', sans-serif;
   font-size: 1.7rem;
 }
 .advantages-text-box ul li {
-  background-image: url("/img/list-style-16.png");
+  background-image: url("/img/list-style/car.png");
   background-repeat: no-repeat;
   background-position: 0% 50%;
   line-height: 3rem;
@@ -594,16 +624,16 @@ font-family: 'Poppins', sans-serif;
 
   .advantages-text-box .number {
     font-size: 2.6rem;
-    font-weight: 700;
+    font-weight: 500;
     width: 16.5rem;
   }
   .advantages-text-box .ctc:link,
   .advantages-text-box .ctc:visited {
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
     color: #fff;
     background-color: hsl(210, 100%, 12%);
     transition: all 0.3s;
-    border-radius: 9px;
+    border-radius: 5px;
   }
 
   .advantages-text-box .ctc:hover,
@@ -612,4 +642,312 @@ font-family: 'Poppins', sans-serif;
     text-decoration: none;
   }
 
+  /* advantages banner 2 */
+  .advantages-img-2 {
+    align-items: center;
+    width: 100%;
+    height: 80%;
+  }
+  .speaker-img-box {
+    align-self: center;
+    display: grid;
+  }
+  /* advantages banner 2 */
 
+
+
+  /* ----should move up in header sectiopn */
+  .header-main-text .ctc {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  .header-main-text .ctc:link,
+  .header-main-text .ctc:visited {
+    padding: 1rem 2rem;
+    color: black;
+    background-color: hsl(39, 77%, 96%);
+    transition: all 0.3s;
+    border-radius: 5px;
+  }
+
+  .header-main-text .ctc:hover,
+  .header-main-text .ctc:active {
+    color: #fff;
+    background-color: hsla(120, 94%, 8%, 0.2);
+    transition: all 0.3s;
+    border-radius: 5px;
+  }
+  /* ---should move up in headerv section=------ */
+
+
+/* --------------------- */
+/* ------price rates-------- */
+/* -------------------- */
+
+.price-rates {
+  display: flex;
+  flex-flow: column;
+  margin: 0 17rem;
+  background-color: hsla(39, 77%, 96%, 0.5);
+  font-family: 'Poppins', sans-serif;;
+}
+
+.price-rates-title {
+  text-align: center;
+  height: 8rem; 
+  width: 100%;
+  padding-top: 1.6rem;
+  background-color: hsl(210, 100%, 13%);
+  color: hsl(39, 77%, 96%);
+  line-height: 1.4;
+}
+
+.price-rates-title h4 {
+  color: hsl(39, 77%, 96%);
+  font-size: 2.4rem;
+}
+
+.price-rates-title span {
+  color: hsla(39, 77%, 96%, 0.8);
+  font-size: 1.6rem;
+}
+
+.price-rates-check h5 {
+  text-align: center;
+  height: 5rem;
+  width: 100%;
+  margin-top: 3rem;
+  font-size: 2rem;
+  vertical-align: middle;
+  color: hsl(210, 100%, 13%);
+}
+
+.price-rates ul {
+  list-style:none;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  padding: 0 2rem;
+}
+
+.price-rates ul li {
+  background-image: url("/img/list-style/check.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  line-height: 3rem;
+  padding-left: 5rem;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.price-rates li::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  height: 15px;
+  width: 90%;
+  margin: 4rem 4rem 4rem 4rem;
+  border-bottom: 2px solid hsla(0, 0%, 0%,0.1);
+}
+
+.price-rates li:first-child::before {
+  border-bottom: none;
+}
+
+.number-box {
+  text-align: center;
+  height: 8rem; 
+  width: 100%;
+  padding-top: 1.6rem;
+  color: hsl(39, 77%, 96%);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.price-rates .ctc:link,
+.price-rates .ctc:visited {
+  padding: 1.4rem 2rem;
+  color: #fff;
+  background-color: hsl(210, 100%, 12%);
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.price-rates .ctc:hover,
+.price-rates .ctc:active {
+  background-color: hsl(120, 98%, 16%);
+  text-decoration: none;
+}
+
+/* --------------------- */
+/* ------testimonial slider-- */
+/* -------------------- */
+
+.testimonial-section {
+  height: 50rem;
+  margin: 0 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.pagination-button {
+  height: 6rem;
+  width: 6rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  cursor: pointer;
+  top: auto;
+  z-index: 10;
+  font-size: 9rem;
+  font-weight: 100;
+}
+.button-next {   
+  right: -9rem;
+}
+.button-prev {
+  left: -9rem;
+}
+
+/* -------------------- */
+/* ---NEW INQUIRY------- */
+/* ---------------------- */
+
+.inquairy {
+  height: 100vh;
+  width: 100%;
+  background: hsla(210, 100%, 12%,1);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* upload */
+ .upload-box {
+  grid-area: upload;
+  width: 50rem;
+  height: 20rem;
+  border: 4px dashed #fff;
+  position: relative;
+}
+
+.upload-box label{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 170px;
+  color: #ffffff;
+  font-family: Arial;
+}
+
+.upload-box input{
+  margin: 0;
+  padding: 0rem;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  position: absolute;
+  top: -1rem;
+  cursor:pointer;
+}
+
+/* -----------form----- */
+.form-box {
+  width: 80rem;
+  height: 80rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "upload upload"                      
+    "name email"                      
+    "select select"                       
+    "btn btn";
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.name {
+  grid-area: name;
+}
+.email {
+  grid-area: email;
+  width: 21.5rem;
+}
+.select {
+  grid-area: select;
+}
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: black;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+}
+
+.cta-from input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem #fdf2e97e;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color:hsl(39, 77%, 90%);
+}
+.btn,
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 1.6rem 3.2rem;
+    border-radius: 8px;
+
+    /* for btn itself */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    
+    transition: all 0.4s;
+}
+
+.btn--form {
+  grid-area: btn;
+  background-color: #45260a;
+  color: #fdf2e9;
+  padding: 1.2rem;
+  align-self: end;
+  width: 100%;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
