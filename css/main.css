@@ -325,7 +325,7 @@ textarea {
 }
 .main-logo a {
   font-size: 4.4rem;
-  color: green;
+  color: hsl(120, 100%, 25%);
   font-weight: 200;
   font-family: 'Raleway', sans-serif;
   cursor: pointer;
@@ -349,12 +349,11 @@ textarea {
   border: none;
   background: none;
   cursor: pointer;
-
   display: none;
+  margin-right: 4rem;
 }
 .icon-mobile-nav {
-  height: 4.2rem;
-  width: 4.2rem;
+  font-size: 4.2rem;
   color: #333;
 }
 
@@ -445,8 +444,33 @@ textarea {
   .number {
     text-decoration: none;
     color: hsl(0, 0%, 92%);
+    position: relative;
   }
+
+  .number i {
+    transition: animation 1.5s ease-in-out;
+  }
+
+  .number:hover i {
+    animation: numberIconAnimation 1s 0.5s forwards,
+              shake 1s 0.8s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
+
+  @keyframes numberIconAnimation {
+    0%   { margin-left: 0; border-radius: 0; border: none; padding: 0;  border-radius: 50%;}
+    25%  { border-radius: 50%; padding: 1rem;}
+    50%  {padding:1rem;}
+    100% {margin-left: 2.4rem; border-radius: 50%; border: 3px solid white;padding: 1rem;}
+  }
+
+  @keyframes shake {
   
+    40%, 60% {
+      transform: translate3d(12px, 0, 10px);
+      transform: rotate(90deg);
+    }
+  }
 
   /**************************/
   /* MILESTONES SECTION */
@@ -577,12 +601,9 @@ font-family: 'Poppins', sans-serif;
   gap: 5.6rem;
   grid-template-columns: repeat(2,1fr);
   padding-top: 5rem;
-  margin: 4rem 17rem;
+  margin: 4rem 17rem 0rem 17rem;
 }
 
-  .advantages-second {
-
-  }
 
 .advantages-img {
   width: 100%;
@@ -784,8 +805,7 @@ font-family: 'Poppins', sans-serif;
 /* -------------------- */
 
 .testimonial-section {
-  height: 50rem;
-  margin: 0 17rem;
+  margin: 0 17rem 8.5rem 17rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -793,6 +813,11 @@ font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   position: relative;
 }
+
+.testimonial-section .car-type-box {
+  padding-bottom: 4rem;
+}
+
 
 .pagination-button {
   height: 6rem;
@@ -804,14 +829,20 @@ font-family: 'Poppins', sans-serif;
   cursor: pointer;
   top: auto;
   z-index: 10;
-  font-size: 9rem;
+  font-size: 4rem;
   font-weight: 100;
 }
+
+.swiper-pagination {
+  display: block;
+  top: 85%;
+}
+
 .button-next {   
-  right: -9rem;
+  right: 0;
 }
 .button-prev {
-  left: -9rem;
+  left: 0;
 }
 
 /* -------------------- */
@@ -950,4 +981,30 @@ font-family: 'Poppins', sans-serif;
 .btn--form:hover {
   background-color: #fff;
   color: #555;
+}
+
+
+/* --------------------------------------------------------------------- */
+/* scroll up button */
+#scrollUp {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 4rem; /* Place the button at the bottom of the page */
+  right: 3rem; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 1.5rem; /* Some padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-size: 1.8rem; /* Increase font size */
+}
+#scrollUp i {
+  margin: .1rem auto;
+}
+
+#scrollUp:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }

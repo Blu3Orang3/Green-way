@@ -5,7 +5,10 @@ const header = document.querySelector("header");
 const navbar = document.querySelector(".nav-wrapper");
 const logo = document.querySelector(".main-logo");
 const carLogo = document.querySelector(".car-logo");
-const navLinks = document.querySelector(".home-link")
+const navLinks = document.querySelector(".home-link");
+const number  = document.querySelector(".number");
+
+
 
 const obs = new IntersectionObserver(
   function (entries) {
@@ -90,6 +93,7 @@ function updateSwiperSlides(windowWidth) {
   currentSlidesPerView = totalSlidesPerView;
 
   //Initialize Swiper
+
   new Swiper('.mySwiper', {
     slidesPerView: currentSlidesPerView,
     spaceBetween: 50,
@@ -106,6 +110,8 @@ function updateSwiperSlides(windowWidth) {
     },
   });
 }
+
+
 
 //OnLoad: (check the screen size when the page loads)
 $(document).ready(function () {
@@ -133,6 +139,7 @@ $("form#cta-form1").submit(function(e) {
   console.log(formData);
 
   $.ajax({
+      // url: "https://www.actionforms.io/e/r/gioxan-test",
       url: "https://formsubmit.co/0faac3b91553191bbf261b0fe4c88766",
       type: 'POST',
       data: formData,
@@ -144,3 +151,25 @@ $("form#cta-form1").submit(function(e) {
       processData: false
   });
 });
+
+
+// ------------------------------------------------------
+// scroll up
+mybutton = document.getElementById("scrollUp");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
