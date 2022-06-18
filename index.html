@@ -41,6 +41,9 @@
   href="https://unpkg.com/swiper/swiper-bundle.min.css"
 />
 
+<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -65,7 +68,7 @@
         <a href="" class="us-flag"><img src="img/flags/us.svg" alt="" class="flag"></a>
       </div>
       <button class="btn-mobile-nav">
-        <i class="fa-solid fa-grip-lines icon-mobile-nav" name="menu-outline"></i>
+        <i class="fa-solid fa-bars icon-mobile-nav" name="menu-outline"></i>
         <i class="fa-solid fa-xmark icon-mobile-nav" name="close-outline"></i>
       </button>
 
@@ -73,10 +76,9 @@
       <div class="header-main-text">
         <h1>Truck Dispatch Service<br>For all scales of business</h1>
         <h2> 
-          <a href="tel:+13128183585" class="number  ctc"> 
+          <a href="tel:+13128183585" class="number ctc"> 
             (312) 818-3585 <i class="fa-solid fa-phone-flip"></i>
-          </a> 
-          
+          </a>           
         </h2>
       </div>
     </header>
@@ -213,7 +215,6 @@
     <section class="testimonial-section ">
       <div class="container swiper mySwiper ">
         <div class="content swiper-wrapper ">
-
           <div class="car-type-box swiper-slide">
             <p class="car-type">Flatbed/Stepdeck</p>
             <i class="las la-truck"></i>
@@ -256,6 +257,7 @@
       </div>
     </section>
     <section class="inquairy">
+      <img src="/img/eastwood-delivery.png" alt="" class="test1">
       <div class="form-box">
         <div class="cta-text-box">
           <form 
@@ -264,10 +266,6 @@
             id="cta-form1"
             enctype="multipart/form-data"
             >
-            <div class="upload-box">
-              <label for="upload">Upload Your Files</label>
-              <input type="file" id="upload" name="atachemnt" multiple>
-            </div>
             <div class="name">
               <label for="full-name">Full Name</label>
               <input id="full-name" type="text" placeholder="Jhon Smith" name="full name" required>
@@ -277,22 +275,34 @@
               <input id="email" type="email" placeholder="me@example.com" name="email" required>
             </div>
             <div class="select">
-              <label for="select-where">Where did you here on us?</label>
+              <label for="select-where">What is your car type?</label>
               <select name="cartype" id="select-where" required name="option:">
                 <option value="">Please choose one option</option>
-                <option value="Friends">Friend and family</option>
-                <option value="youtube">Youtube video</option>
-                <option value="podcast">Podcast</option>
-                <option value="ad">Facebook ad</option>
+                <option value="Friends">Truck</option>
+                <option value="youtube">Semi-truck</option>
+                <option value="podcast">cargo-car</option>
+                <option value="ad">Glacier</option>
                 <option value="others">Others</option>
               </select>
             </div>
-      
+            <div class="upload-box">
+              <label for="upload">Upload Your Files</label>
+              <input type="file" id="upload" name="filepond" class="filepond filepond--root" multiple>
+            </div>
             <button class="btn btn--form" type="submit">Submit New Inquairy</button>
             <input type="hidden" name="_captcha" value="false">
           </form>
+        </div>
       </div>
     </section>
+    <footer>
+      <h5>©2022 | Green Way Ltd | Independent Dispatch Services</h5>
+      <div class="socials">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-solid fa-at"></i></a>
+      </div>
+    </footer>
     <button onclick="topFunction()" id="scrollUp" title="Go to top">
       <i class="fa-solid fa-chevron-up"></i>
     </button>
@@ -302,7 +312,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
+  <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+<!-- include FilePond plugins -->
+<!-- Add plugin scripts -->
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
+
+<!-- include FilePond jQuery adapter -->
+<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+<script src="js/plugins.js"></script>
+
   <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
   <script src="js/main.js"></script>
 
