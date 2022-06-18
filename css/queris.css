@@ -73,6 +73,8 @@
     z-index: 9999;
   }
 
+  .flag-container {display: none;}
+
   .main-nav {
     background-color: rgba(255, 255, 255, 0.97);
     position: absolute;
@@ -147,10 +149,6 @@
     margin: 2rem 10rem;
   }
 
-  .inquairy {
-    height: 60vh;
-  }
-
   .form-box {
     height: 60rem;
   }
@@ -185,6 +183,20 @@
   .milestone span {
     display: block;
     width: 100%;
+  }
+
+  .inquairy {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 80%;
+    height: 100%;
+  }
+  .cta-text-box {
+    padding: 0rem 6.4rem 1.5rem 4.8rem;
+  }
+  .test1 {
+    margin: 5rem 0 0 0;
+    align-self: end;
+    justify-self: center;
   }
 }
 

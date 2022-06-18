@@ -173,3 +173,18 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+   
+
+// FilePond.registerPlugin(
+//   FilePondPluginImagePreview,
+//   FilePondPluginImageResize,
+//   FilePondPluginImageTransform
+// );
+const inputElement = document.querySelector('input[type="file"]');
+const pond = FilePond.create(inputElement, {
+  imageResizeTargetWidth: 256,
+  imageResizeMode: 'contain',
+
+
+
+});
