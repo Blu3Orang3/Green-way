@@ -9,7 +9,7 @@
   }
 
   .car-categories {
-    margin: 0 4rem;
+    margin: 1rem 4rem;
   }
 
   .car-categories-wrapper {
@@ -63,6 +63,10 @@
 
   .car-categories {
     margin: 2rem 1rem;
+  }
+
+  .price-rates {
+    margin: 0 10rem;
   }
 
 }
@@ -142,11 +146,22 @@
   html { font-size: 45%; }
 
   .header {
-    height: 50;
+    /* height: 50vh; */
+  }
+
+  .nav-wrapper {
+    height: 12rem;
   }
 
   .advantages {
     margin: 2rem 10rem;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+
+  .advantages-text-box{
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .form-box {
@@ -154,15 +169,15 @@
   }
 
   .milestones {
-    justify-content: center;
+    justify-content: start;
   }
   .milestone {
-    width: 66%;
+    width: fit-content;
     grid-auto-flow: column;
     margin: 3rem auto;
     height:100%;
     font-size: 12rem;
-    justify-content: start;
+    justify-content:start;
   }
 
   .milestone .milestonete-text {
@@ -172,10 +187,9 @@
     align-items: center;
   }
   .milestone i {
-    height: 15rem;
-    width: 15rem;
-    font-size: 14rem;
-    margin-left: 9rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 4rem;
     border-radius: 50%;
     padding: 1rem;
     margin: 0 auto;
@@ -198,6 +212,20 @@
     align-self: end;
     justify-self: center;
   }
+
+  .car-categories-wrapper {
+    grid-template-columns: 1fr;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .price-rates {
+    margin: 0 3rem;
+  }
+
+  .price-rates li::before {
+    width: 70%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -211,7 +239,7 @@
   }
 
   .inquairy {
-    height: 40vh;
+    height: 60vh;
     align-items: start;
   }
   .form-box {
@@ -221,4 +249,9 @@
   .price-rates {
     margin: 0 4rem;
   }
+}
+
+@media (max-width: 350px) {
+  html { font-size: 25%; }
+
 }
