@@ -887,6 +887,7 @@ font-family: 'Poppins', sans-serif;
   height: 90%;
   justify-self: end;
   margin-top: 5rem;
+  margin-right: 2rem;
 }
 
 /* .inquairy h5 {
@@ -903,6 +904,12 @@ font-family: 'Poppins', sans-serif;
  .upload-box {
   grid-area: upload;
   position: relative;
+  width: 96%;
+}
+
+.cta-form input,
+.cta-form select {
+  padding: 9rem;
 }
 
 /* -----------form----- */

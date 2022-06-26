@@ -143,10 +143,8 @@
 
 
 @media (max-width: 650px) {
-  html { font-size: 45%; }
-
-  .header {
-    /* height: 50vh; */
+  html { 
+    font-size: 45%; 
   }
 
   .nav-wrapper {
