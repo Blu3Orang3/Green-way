@@ -41,9 +41,6 @@
   href="https://unpkg.com/swiper/swiper-bundle.min.css"
 />
 
-<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
-<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -296,7 +293,7 @@
             </div>
             <div class="upload-box">
               <label for="upload">Upload Your Files</label>
-              <input type="file" id="upload" name="filepond" class="filepond filepond--root" multiple>
+              <input type="file" id="upload" name="upload-file" class="upload-input" multiple>
             </div>
             <button class="btn btn--form" type="submit">Submit New Inquairy</button>
             <input type="hidden" name="_captcha" value="false">
@@ -321,17 +318,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-
-<!-- include FilePond plugins -->
-<!-- Add plugin scripts -->
-<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
-<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
-<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
-
-<!-- include FilePond jQuery adapter -->
-<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
-<script src="js/plugins.js"></script>
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
   <script src="js/main.js"></script>
