@@ -647,7 +647,7 @@ font-family: 'Poppins', sans-serif;
   font-size: 1.7rem;
 }
 .advantages-text-box ul li {
-  background-image: url("img/list-style/car.png");
+  background-image: url("/img/list-style/car.png");
   background-repeat: no-repeat;
   background-position: 0% 50%;
   line-height: 3rem;
@@ -757,7 +757,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .price-rates ul li {
-  background-image: url("img/list-style/check.svg");
+  background-image: url("/img/list-style/check.svg");
   background-repeat: no-repeat;
   background-position: 0% 50%;
   line-height: 3rem;
