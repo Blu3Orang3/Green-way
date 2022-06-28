@@ -308,18 +308,22 @@
   .testimonial-section {
     margin: 0 3rem 6rem 3rem;
   }
+  .price-rates {
+    margin: 0 4rem;
+  }
 
-  /* .inquairy {
+   .inquairy {
     height: 70vh;
-    
-  } */
+    display: flex;
+    flex-direction: column;
+  } 
   .form-box {
     margin: 0 auto;
   }
   
-
-  .price-rates {
-    margin: 0 4rem;
+  .test1 {
+    margin-top: 0;
+    align-self: center;
   }
 }
 
