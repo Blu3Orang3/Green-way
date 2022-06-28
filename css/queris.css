@@ -42,7 +42,7 @@
 
   .header {
     height:65vh;
-    background: url("../img/hero-img/hero-img-3-blured.webp");
+    background: url("../img/hero-img/hero-img-3.webp");
     background-position: 50% 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -252,6 +252,23 @@
 }
 
 @media (max-width: 450px) {
+  .header {
+    height:50vh;
+    background: url("../img/hero-img/hero-img-3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .header h1 {
+    font-size: 4rem;
+  }
+  .header .number {
+    font-size: 5.5rem;
+  }
+
+}
+
+@media (max-width: 450px) {
   .testimonial-section {
     margin: 0 1rem 6rem 1rem;
   }
@@ -283,15 +300,20 @@
 }
 
 .mc-code{
-  width:calc(100%-1.2rem);
+  width:calc(100%-1rem);
 }
 .contact-number {
-  width:calc(100%-1.2rem);
+  width:102%;
 }
 
 .btn--form {
-  width: 99%;
+  width: 102%;
+  padding: 3rem;
   margin: 0 auto;
+}
+.btn--form select, 
+.btn--form input { 
+  padding: 3rem;
 }
 
 }
@@ -313,11 +335,30 @@
   }
 
    .inquairy {
-    height: 70vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
   } 
   .form-box {
+    margin: 0 auto;
+    margin-bottom: 9rem;
+  }
+  .inquairy input,
+  .inquairy select {
+    padding: 2rem;
+  }
+
+  .select {
+    width: 105%;
+  }
+
+  .contact-number {
+    width:105%;
+  }
+  
+  .btn--form {
+    width: 105%;
+    padding: 3rem;
     margin: 0 auto;
   }
   
