@@ -7,7 +7,7 @@ const logo = document.querySelector(".main-logo");
 const carLogo = document.querySelector(".car-logo");
 const navLinks = document.querySelector(".home-link");
 const number  = document.querySelector(".number");
-
+let windowWidthGlobal = $(window).width();
 
 
 const obs = new IntersectionObserver(
@@ -17,10 +17,18 @@ const obs = new IntersectionObserver(
 
     if (ent.isIntersecting === false) {
       navbar.classList.add("sticky");
+      navbar.style.backgroundColor = 'hsl(37, 80%, 99%)';
     }
 
     if (ent.isIntersecting === true) {
       navbar.classList.remove("sticky");
+      navbar.style.backgroundColor = 'rgba(223, 211, 211, 0.6)'; 
+      if(windowWidthGlobal<450) {
+        navbar.style.backgroundColor = 'transparent'; 
+        navbar.style.backdropFilter = 'none'; 
+        navbar.style.boxShadow = 'none'; 
+      }
+      
     }
   },
   {
