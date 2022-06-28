@@ -320,6 +320,7 @@
 @media (max-width: 400px) {
   html { font-size: 30%; }
 
+
   .advantages-text-box ul  {
     overflow: auto;
   }
@@ -334,7 +335,7 @@
     margin: 0 4rem;
   }
 
-   .inquairy {
+  .inquairy {
     height: 100%;
     display: flex;
     flex-direction: column;
