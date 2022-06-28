@@ -292,9 +292,21 @@
                 <option value="others">Others</option>
               </select>
             </div>
-            <div class="upload-box">
-              <label for="upload">Upload Your Files</label>
-              <input type="file" id="upload" name="upload-file" class="upload-input" multiple>
+            <div class="mc-code">
+              <!-- <label for="mc">Send us your mc code</label> -->
+              <div class="mc-label">
+                <i class="fa-solid fa-file"></i>
+                <span>MC number</span>
+              </div>
+              <input type="text" id="mc" name="mc-code" class="upload-input"
+              placeholder="xxxxxx">
+            </div>
+            <div class="contact-number">
+              <input type="tel" id="contact-tel" name="contact-tel">
+              <div class="contact">
+                <i class="fa-solid fa-phone-flip"></i>
+                <span>Phone number</span>
+              </div>
             </div>
             <button class="btn btn--form" type="submit">Submit New Inquairy</button>
             <input type="hidden" name="_captcha" value="false">
