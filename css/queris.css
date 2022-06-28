@@ -197,9 +197,34 @@
     width: 100%;
   }
 
+  .testimonial-section {
+    margin: 0 8rem 6rem 8rem;
+  }
+  .testimonial-section .car-type-box { 
+    padding: 8rem 0;
+    height: 100%;
+  }
+  
+
+  .car-type-box i {
+    font-size: 20rem;
+    }
+
+    .car-type {
+      font-size: 4rem;
+      font-weight: 400;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 4rem;
+      }
+      .car-type-description {
+        padding: 0.4rem 2rem;
+      font-size: 2.4rem;
+      font-family: 'Poppins', sans-serif;
+      }
+
   .inquairy {
     grid-template-columns: 1fr;
-    grid-template-rows: 60% 80%;
+    grid-template-rows: 60% 40%;
     height: 100%;
   }
   .cta-text-box {
@@ -226,6 +251,50 @@
   }
 }
 
+@media (max-width: 450px) {
+  .testimonial-section {
+    margin: 0 1rem 6rem 1rem;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+    grid-template-areas:                      
+      "name" 
+      "email"                     
+      "select"  
+      "upload" 
+      "contact"
+      "btn";
+  }
+
+  
+.name {
+  width:94%;
+}
+.email {
+  width:94%;
+}
+.select {
+  width: 100%;
+}
+
+.cta-form {
+  padding:2rem;
+}
+
+.mc-code{
+  width:calc(100%-1.2rem);
+}
+.contact-number {
+  width:calc(100%-1.2rem);
+}
+
+.btn--form {
+  width: 99%;
+  margin: 0 auto;
+}
+
+}
 @media (max-width: 400px) {
   html { font-size: 30%; }
 
@@ -236,20 +305,21 @@
     padding-left: 4rem;
   }
 
-  .inquairy {
-    height: 60vh;
-    align-items: start;
+  .testimonial-section {
+    margin: 0 3rem 6rem 3rem;
   }
+
+  /* .inquairy {
+    height: 70vh;
+    
+  } */
   .form-box {
-    height: 40rem;
+    margin: 0 auto;
   }
+  
 
   .price-rates {
     margin: 0 4rem;
   }
 }
 
-@media (max-width: 350px) {
-  html { font-size: 25%; }
-
-}

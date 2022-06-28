@@ -296,6 +296,7 @@ textarea {
   z-index: 999; 
   background-color: rgba(223, 211, 211, 0.6);
   position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .nav-wrapper * {
@@ -609,6 +610,7 @@ font-size: 2.8rem;
 font-weight: 400;
 font-family: 'Poppins', sans-serif;
 margin-top: 4rem;
+padding: 1rem;
 }
 .car-type-description {
   padding: 0.4rem 2rem;
@@ -812,6 +814,9 @@ font-family: 'Poppins', sans-serif;
 .testimonial-sec {
     text-align: center;
 }
+.testimonial-sec h4 {
+    padding-bottom: 0;
+}
 .testimonial-section {
   margin: 0 17rem 8.5rem 17rem;
   display: flex;
@@ -820,7 +825,7 @@ font-family: 'Poppins', sans-serif;
   text-align: center;
   font-size: 2rem;
   position: relative;
-  padding: 4rem;
+  padding: 0rem 4rem 4rem 4rem;
 }
 
 .testimonial-section .content {
@@ -849,7 +854,7 @@ font-family: 'Poppins', sans-serif;
 
 .swiper-pagination {
   display: block;
-  top: 85%;
+  top: 88%;
 }
 
 .button-prev i, 
@@ -890,37 +895,15 @@ font-family: 'Poppins', sans-serif;
   margin-right: 2rem;
 }
 
-/* .inquairy h5 {
-  grid-column-start: span 2;
-  height: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  font-size: 4rem;
-  color: white;
-  margin-top: 4rem;
-} */
-/* upload */
- .upload-box {
-  grid-area: upload;
-  position: relative;
-  width: 96%;
-}
-
-.cta-form input,
-.cta-form select {
-  padding: 9rem;
-}
 
 /* -----------form----- */
 .form-box {
-  width: 100%;
-  height: auto;
+  width: fit-content;
   display: grid;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  align-self: flex-start;
+  box-sizing:content-box;
+  margin:auto;
 }
 .cta-form {
   width: 100%;
@@ -929,7 +912,8 @@ font-family: 'Poppins', sans-serif;
   grid-template-areas:                      
     "name email"                      
     "select select"  
-    "upload upload"                     
+    "upload upload"
+    "contact contact"                     
     "btn btn";
   column-gap: 3.2rem;
   row-gap: 2.4rem;
@@ -939,16 +923,80 @@ font-family: 'Poppins', sans-serif;
   grid-area: name;
   width: 100%;
 }
-.email {
+.email{
   grid-area: email;
   width: 90%;
 }
 .select {
   grid-area: select;
+  width: 100%;
 }
+
+.mc-code {
+  grid-area: upload;
+  position: relative;
+  width: 95%;
+  justify-self: start;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  color: #fdf2e9;
+}
+
+.mc-code .mc-label {
+  background: #756a76;
+  background-size: cover;
+  border-radius: 6px 0px 0px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem 0;
+}
+
+.mc-code .mc-label span {
+  padding-left: 1rem;
+  margin-right: 1.2rem;
+}
+
+/* -------------------- */
+.contact-number {
+  grid-area: contact;
+  position: relative;
+  width: 100%;
+  justify-self: start;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  color: #fdf2e9;
+}
+
+.contact-number .contact {
+  background: #756a76;
+  background-size: cover;
+  border-radius: 0px 6px 6px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem 0;
+  color: #fdf2e9;
+}
+
+.contact-number .contact span {
+  padding-left: 1rem;
+  /* margin-right: 1.2rem; */
+}
+
 
 .cta-form {
   padding:2rem;
+}
+
+
+.cta-form input,
+.cta-form select {
+  padding: 9rem;
 }
 .cta-form label {
   display: block;
@@ -966,8 +1014,17 @@ font-family: 'Poppins', sans-serif;
   color: black;
   border: none;
   background-color: #fdf2e9;
-  border-radius: 9px;
+  border-radius: 6px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+}
+
+.mc-code input,
+.mc-code select {
+  border-radius: 0px 6px 6px 0px;
+}
+.contact-number input,
+.contact-number select {
+  border-radius: 6px 6px 6px 6px;
 }
 
 .cta-from input::placeholder {
@@ -1006,7 +1063,6 @@ font-family: 'Poppins', sans-serif;
   background-color: hsl(358, 23%, 35%);
   color: #fdf2e9;
   padding: 1.2rem;
-  align-self: end;
   width: 100%;
 }
 .btn--form:hover {
