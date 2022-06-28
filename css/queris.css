@@ -335,7 +335,7 @@
   }
 
    .inquairy {
-    height: 80vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
   } 
@@ -349,15 +349,19 @@
   }
 
   .select {
-    width: 105%;
+    width: 106%;
   }
 
   .contact-number {
-    width:105%;
+    width:106%;
+  }
+
+  .mc-code{
+    width:96%;
   }
   
   .btn--form {
-    width: 105%;
+    width: 106%;
     padding: 3rem;
     margin: 0 auto;
   }
