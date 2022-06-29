@@ -49,6 +49,13 @@ mobileNav.addEventListener("click", function () {
 });
 
 
+//gsap load prevention on mobile
+let GsapScript = document.querySelector('.gsap');
+
+if(windowWidthGlobal<900) {
+  GsapScript.src = 'loadOptimization';      
+} 
+
 // animate car
 $(document).ready(function() {
   windowWidth = $(window).width();
