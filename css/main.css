@@ -580,7 +580,7 @@ textarea {
   text-align: center;
   padding-top: 1rem;
   margin: 0 8rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 .car-categories-notice {
   display: block;
@@ -632,7 +632,7 @@ font-family: 'Poppins', sans-serif;
   display: grid;
   gap: 5.6rem;
   grid-template-columns: repeat(2,1fr);
-  margin: 4rem 17rem 0rem 17rem;
+  margin: 4rem 15rem 0rem 15rem;
 }
 
 
@@ -645,7 +645,7 @@ font-family: 'Poppins', sans-serif;
 .advantages-text-box {
   display: flex;
   flex-flow: column;
-  margin-top: 8rem;
+  margin-top: 3rem;
   gap: 2rem;
   
 }
@@ -824,7 +824,7 @@ font-family: 'Poppins', sans-serif;
     padding-bottom: 0;
 }
 .testimonial-section {
-  margin: 0 17rem 8.5rem 17rem;
+  margin: 0 17rem 4rem 17rem;
   display: flex;
   align-items: center;
   justify-content: center;
