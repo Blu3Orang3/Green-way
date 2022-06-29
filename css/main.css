@@ -637,9 +637,10 @@ font-family: 'Poppins', sans-serif;
 
 
 .advantages-img {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  width: 100%;
-  height: 95%;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+  width: 60%;
+  height: 100%;
+  justify-self: center;
 }
 
 .advantages-text-box {
@@ -701,7 +702,7 @@ font-family: 'Poppins', sans-serif;
     align-items: center;
     width: 100%;
     height: 90%;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
   }
   .speaker-img-box {
     margin-top: 3rem;
@@ -763,6 +764,7 @@ font-family: 'Poppins', sans-serif;
   font-size: 1.7rem;
   padding: 0 2rem;
 }
+
 
 .price-rates ul li {
   background-image: url("../img/list-style/check.svg");
