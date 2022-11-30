@@ -206,9 +206,6 @@
     height: 60rem;
   }
 
-  .milestones {
-    justify-content: start;
-  }
   .milestone {
     width: fit-content;
     grid-auto-flow: column;

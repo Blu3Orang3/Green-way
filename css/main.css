@@ -508,6 +508,9 @@ textarea {
     text-align: center;
     padding-top: 5rem;
     margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
   }
   .achivement-notice {
     display: block;
@@ -638,7 +641,7 @@ font-family: 'Poppins', sans-serif;
 
 .advantages-img {
   /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-  width: 60%;
+  width: 100%;
   height: 100%;
   justify-self: center;
 }
